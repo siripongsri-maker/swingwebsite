@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Type scale</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  body { padding: 20px 28px; }
+  .row { display: grid; grid-template-columns: 80px 1fr 90px; gap: 16px; align-items: baseline; padding: 4px 0; border-bottom: 1px dashed var(--ink-100); }
+  .row:last-child { border: none; }
+  .tag { font-family: var(--font-mono); font-size: 11px; color: var(--fg-3); text-transform: uppercase; letter-spacing: 0.08em; }
+  .meta { font-family: var(--font-mono); font-size: 11px; color: var(--fg-3); text-align: right; }
+  .specimen { color: var(--swing-purple-deep); }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="tag">H1</div>
+    <div class="specimen" style="font-family: var(--font-display); font-weight: 700; font-size: 40px; line-height: 1.05; letter-spacing: -0.01em;">Display H1</div>
+    <div class="meta">Prompt 700 · 40/42</div>
+  </div>
+  <div class="row">
+    <div class="tag">H2</div>
+    <div class="specimen" style="font-family: var(--font-display); font-weight: 600; font-size: 28px; line-height: 1.15;">Section heading</div>
+    <div class="meta">Prompt 600 · 28/32</div>
+  </div>
+  <div class="row">
+    <div class="tag">H3</div>
+    <div class="specimen" style="font-family: var(--font-display); font-weight: 600; font-size: 20px; color: var(--swing-purple);">Card heading</div>
+    <div class="meta">Prompt 600 · 20/25</div>
+  </div>
+  <div class="row">
+    <div class="tag">Eyebrow</div>
+    <div class="specimen" style="font-family: var(--font-display); font-weight: 600; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--swing-pink);">Programme · Health</div>
+    <div class="meta">Prompt 600 · 12 · 14% LS</div>
+  </div>
+  <div class="row">
+    <div class="tag">Body</div>
+    <div class="specimen" style="font-family: var(--font-body); font-size: 15px; line-height: 1.6; color: var(--fg-1);">Service workers are human beings with potential and capability.</div>
+    <div class="meta">Sarabun 400 · 15/24</div>
+  </div>
+  <div class="row">
+    <div class="tag">Caption</div>
+    <div class="specimen" style="font-family: var(--font-body); font-size: 12px; color: var(--fg-3);">Tel +66 2632 9502 (Head Office)</div>
+    <div class="meta">Sarabun 400 · 12/18</div>
+  </div>
+</body>
+</html>

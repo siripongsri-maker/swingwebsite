@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Logo</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  body { padding: 0; }
+  .wrap {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 0;
+    min-height: 280px;
+  }
+  .light {
+    background: var(--paper);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+  }
+  .dark {
+    background: var(--swing-purple-deep);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+  }
+  .dark::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(circle at 70% 110%, rgba(230,59,140,0.35), transparent 55%);
+    pointer-events: none;
+  }
+  img { max-width: 240px; height: auto; position: relative; z-index: 1; }
+  .dark img { filter: drop-shadow(0 0 24px rgba(255,255,255,0.15)); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="light"><img src="../assets/swing-logo-high.png" alt="SWING logo"></div>
+    <div class="dark"><img src="../assets/swing-logo-high.png" alt="SWING logo on dark"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Wave decoration</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  body { padding: 0; }
+  .stack { display: flex; flex-direction: column; }
+  .panel { padding: 22px 28px; }
+  .panel.purple { background: var(--swing-purple-deep); color: white; }
+  .panel.white { background: white; color: var(--swing-purple-deep); }
+  .panel.muted { background: var(--paper-2); color: var(--swing-purple-deep); }
+  .h { font-family: var(--font-display); font-weight: 700; font-size: 18px; margin-bottom: 4px; }
+  .p { font-family: var(--font-body); font-size: 12px; opacity: 0.85; }
+  .wave { display: block; width: 100%; height: auto; }
+  .wave.flipv { transform: scaleY(-1); }
+</style>
+</head>
+<body>
+  <div class="stack">
+    <div class="panel purple">
+      <div class="h">Section A · purple ground</div>
+      <div class="p">A wave decoration closes this section and opens the next.</div>
+    </div>
+    <img class="wave" src="../assets/asset-12.png" alt="">
+    <div class="panel white">
+      <div class="h">Section B · white ground</div>
+      <div class="p">Sections never blend by gradient — only by wave decorations.</div>
+    </div>
+    <img class="wave flipv" src="../assets/asset-56.png" alt="">
+    <div class="panel muted">
+      <div class="h">Section C · muted ground</div>
+    </div>
+  </div>
+</body>
+</html>

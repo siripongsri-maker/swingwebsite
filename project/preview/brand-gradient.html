@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Wave gradient</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  body { padding: 0; }
+  .wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 280px;
+  }
+  .a {
+    background: var(--grad-wave);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px;
+    font-family: var(--font-display);
+  }
+  .a .name { font-weight: 700; font-size: 20px; letter-spacing: -0.01em; }
+  .a .stops { display: flex; flex-direction: column; gap: 4px; font-family: var(--font-mono); font-size: 11px; opacity: 0.92; }
+  .b {
+    background: white;
+    position: relative;
+    overflow: hidden;
+  }
+  .b img { position: absolute; bottom: 0; left: 0; width: 100%; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="a">
+      <div>
+        <div class="name">Wave gradient</div>
+        <div style="font-family: var(--font-body); font-size: 13px; opacity: 0.85; margin-top: 4px;">Signature section transition</div>
+      </div>
+      <div class="stops">
+        <span>0%  · #4F3E78  swing-purple</span>
+        <span>100% · #FF0099  swing-pink</span>
+      </div>
+    </div>
+    <div class="b"><img src="../assets/asset-11.png" alt=""></div>
+  </div>
+</body>
+</html>

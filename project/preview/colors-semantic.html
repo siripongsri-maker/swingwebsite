@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Semantic colors</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  body { padding: 22px 24px 18px; }
+  .head {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--fg-3);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .head svg { width: 32px; height: 32px; }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .sem {
+    border-radius: var(--r-md);
+    padding: 14px;
+    min-height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+  .sem .label { font-family: var(--font-display); font-weight: 600; font-size: 14px; }
+  .sem .role  { font-size: 10px; opacity: 0.88; line-height: 1.35; margin-top: 2px; }
+  .sem .meta  { display: flex; justify-content: space-between; align-items: flex-end; font-family: var(--font-mono); font-size: 11px; }
+  .sem .hue   { opacity: 0.75; font-size: 10px; }
+</style>
+</head>
+<body>
+  <div class="head">
+    <!-- color-wheel quadrant diagram -->
+    <svg viewBox="-50 -50 100 100" fill="none">
+      <circle r="42" stroke="#E8E5EF" stroke-width="1.5"/>
+      <circle r="3" cx="34" cy="-25" fill="#FF0099"/>   <!-- 324° -->
+      <circle r="3" cx="25" cy="34"  fill="#D6B800"/>   <!-- 54°  -->
+      <circle r="3" cx="-34" cy="25" fill="#00B85C"/>   <!-- 144° -->
+      <circle r="3" cx="-25" cy="-34" fill="#1A00FF"/>  <!-- 234° -->
+      <line x1="34" y1="-25" x2="-34" y2="25" stroke="#B5B0C2" stroke-width="0.6" stroke-dasharray="2 2"/>
+      <line x1="25" y1="34" x2="-25" y2="-34" stroke="#B5B0C2" stroke-width="0.6" stroke-dasharray="2 2"/>
+    </svg>
+    <span>Square tetrad · four hues 90° apart, anchored on the brand pink</span>
+  </div>
+
+  <div class="grid">
+    <div class="sem" style="background: var(--accent)">
+      <div><div class="label">accent</div><div class="role">CTAs, links</div></div>
+      <div class="meta"><span>#FF0099</span><span class="hue">324°</span></div>
+    </div>
+    <div class="sem" style="background: var(--warn)">
+      <div><div class="label">warn</div><div class="role">Attention needed</div></div>
+      <div class="meta"><span>#D6B800</span><span class="hue">54°</span></div>
+    </div>
+    <div class="sem" style="background: var(--success)">
+      <div><div class="label">success</div><div class="role">Test results OK</div></div>
+      <div class="meta"><span>#00B85C</span><span class="hue">144°</span></div>
+    </div>
+    <div class="sem" style="background: var(--danger)">
+      <div><div class="label">danger</div><div class="role">Critical · form error</div></div>
+      <div class="meta"><span>#1A00FF</span><span class="hue">234°</span></div>
+    </div>
+  </div>
+</body>
+</html>

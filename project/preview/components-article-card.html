@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Article card</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  body { padding: 22px; }
+  .list { display: flex; flex-direction: column; gap: 14px; }
+  .post {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 12px;
+    border-radius: 14px;
+    border: 1px solid var(--ink-100);
+    background: white;
+  }
+  .post img {
+    width: 80px; height: 80px;
+    border-radius: 999px;
+    object-fit: cover;
+  }
+  .post .body { display: flex; flex-direction: column; gap: 6px; }
+  .post h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.3;
+    color: var(--swing-purple-deep);
+  }
+  .post .meta { display: flex; gap: 8px; align-items: center; font-family: var(--font-mono); font-size: 10px; color: var(--fg-3); }
+  .chip {
+    font-family: var(--font-display);
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--swing-pink-deep);
+    background: var(--swing-pink-soft);
+    padding: 2px 8px;
+    border-radius: 999px;
+    letter-spacing: 0.04em;
+  }
+  .chip.purple { color: var(--swing-purple-deep); background: var(--swing-purple-soft); }
+</style>
+</head>
+<body>
+  <div class="list">
+    <div class="post">
+      <img src="../assets/photo-rights.jpg" alt="">
+      <div class="body">
+        <h3>SWING joins the 3rd Action Plan Workshop to advance gender equality in Thai law.</h3>
+        <div class="meta">
+          <span class="chip">Article</span>
+          <span class="chip purple">News</span>
+          <span>8 Oct 2025</span>
+        </div>
+      </div>
+    </div>
+    <div class="post">
+      <img src="../assets/photo-clinic.jpg" alt="">
+      <div class="body">
+        <h3>Mobile clinic reaches 14 outreach sites this quarter.</h3>
+        <div class="meta">
+          <span class="chip">Article</span>
+          <span>6 Oct 2025</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

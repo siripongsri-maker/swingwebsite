@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Brand colors</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  body { padding: 24px; }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .sw {
+    border-radius: var(--r-lg);
+    padding: 20px;
+    color: white;
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: var(--shadow-sm);
+  }
+  .sw .name { font-family: var(--font-display); font-weight: 600; font-size: 18px; letter-spacing: -0.01em; }
+  .sw .role { font-size: 12px; opacity: 0.85; margin-top: 2px; }
+  .sw .hex  { font-family: var(--font-mono); font-size: 13px; opacity: 0.95; }
+  .tints { display: flex; gap: 6px; margin-top: 12px; }
+  .tints span { flex: 1; height: 22px; border-radius: 4px; }
+</style>
+</head>
+<body>
+  <div class="pair">
+    <div class="sw" style="background: var(--swing-pink);">
+      <div>
+        <div class="name">SWING Pink</div>
+        <div class="role">Primary · CTAs, links, waves</div>
+      </div>
+      <div>
+        <div class="tints">
+          <span style="background: var(--swing-pink-soft)"></span>
+          <span style="background: var(--swing-pink)"></span>
+          <span style="background: var(--swing-pink-deep)"></span>
+        </div>
+        <div class="hex" style="margin-top:8px">#FF0099</div>
+      </div>
+    </div>
+    <div class="sw" style="background: var(--swing-purple);">
+      <div>
+        <div class="name">SWING Purple</div>
+        <div class="role">Secondary · headings, dark surfaces</div>
+      </div>
+      <div>
+        <div class="tints">
+          <span style="background: var(--swing-purple-soft)"></span>
+          <span style="background: var(--swing-purple)"></span>
+          <span style="background: var(--swing-purple-deep)"></span>
+        </div>
+        <div class="hex" style="margin-top:8px">#4F3E78</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

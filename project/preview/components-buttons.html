@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Buttons</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  body { padding: 28px; }
+  .row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: 12px; }
+  .row:last-child { margin-bottom: 0; }
+  button {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    padding: 12px 24px;
+    border-radius: 999px;
+    transition: all var(--t-fast) var(--ease-out);
+  }
+  .primary { background: var(--swing-pink); color: white; box-shadow: var(--shadow-pink); }
+  .primary:hover { background: var(--swing-pink-deep); }
+
+  .secondary { background: var(--swing-purple); color: white; }
+  .secondary:hover { background: var(--swing-purple-deep); }
+
+  .outline { background: transparent; color: var(--swing-pink); box-shadow: inset 0 0 0 1.5px var(--swing-pink); }
+  .outline:hover { background: var(--swing-pink-soft); }
+
+  .ghost { background: transparent; color: var(--swing-purple); }
+  .ghost:hover { background: var(--swing-purple-soft); }
+
+  .lg { padding: 16px 32px; font-size: 16px; }
+  .sm { padding: 8px 16px; font-size: 13px; }
+
+  .label { font-family: var(--font-mono); font-size: 10px; color: var(--fg-3); width: 70px; text-transform: uppercase; letter-spacing: 0.08em; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <span class="label">Primary</span>
+    <button class="primary lg">Make an Appointment</button>
+    <button class="primary">Support us</button>
+    <button class="primary sm">Subscribe</button>
+  </div>
+  <div class="row">
+    <span class="label">Secondary</span>
+    <button class="secondary">Learn more</button>
+    <button class="outline">Read article</button>
+    <button class="ghost">Cancel</button>
+  </div>
+</body>
+</html>

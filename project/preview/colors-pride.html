@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pride palette</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  body { padding: 24px; }
+  .bar {
+    height: 28px;
+    border-radius: var(--r-pill);
+    background: var(--grad-pride);
+    margin-bottom: 16px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+  }
+  .ch {
+    aspect-ratio: 1 / 1.15;
+    border-radius: var(--r-md);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 8px;
+    color: white;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.25);
+  }
+  .ch .n { font-family: var(--font-display); font-size: 11px; font-weight: 600; }
+</style>
+</head>
+<body>
+  <div class="bar"></div>
+  <div class="grid">
+    <div class="ch" style="background:#E53935"><div class="n">Red</div>E53935</div>
+    <div class="ch" style="background:#F57C00"><div class="n">Orange</div>F57C00</div>
+    <div class="ch" style="background:#FDD835;color:#3D3552;text-shadow:none"><div class="n">Yellow</div>FDD835</div>
+    <div class="ch" style="background:#43A047"><div class="n">Green</div>43A047</div>
+    <div class="ch" style="background:#00897B"><div class="n">Teal</div>00897B</div>
+    <div class="ch" style="background:#1E88E5"><div class="n">Blue</div>1E88E5</div>
+    <div class="ch" style="background:#7B1FA2"><div class="n">Purple</div>7B1FA2</div>
+  </div>
+</body>
+</html>
