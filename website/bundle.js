@@ -248,7 +248,7 @@ function Header({
       navigate('home');
     }
   }, /*#__PURE__*/React.createElement("img", {
-    src: "../project/assets/swing-logo-high.png",
+    src: "assets/swing-logo-high.png",
     alt: "SWING"
   }), /*#__PURE__*/React.createElement("div", {
     className: "site-header__brand-text"
@@ -357,7 +357,7 @@ function Footer({
   }, /*#__PURE__*/React.createElement("div", {
     className: "site-footer__inner"
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("img", {
-    src: "../project/assets/swing-logo-high.png",
+    src: "assets/swing-logo-high.png",
     alt: "SWING"
   }), /*#__PURE__*/React.createElement("div", {
     className: "site-footer__tagline"
@@ -855,7 +855,7 @@ function Home({
     className: "hero__inner"
   }, /*#__PURE__*/React.createElement("img", {
     className: "hero__logo",
-    src: "../project/assets/swing-logo-high.png",
+    src: "assets/swing-logo-high.png",
     alt: "SWING Foundation"
   }), /*#__PURE__*/React.createElement("div", {
     className: "hero__eyebrow"
@@ -878,7 +878,7 @@ function Home({
     name: "arrow-right",
     size: 16
   }))))), /*#__PURE__*/React.createElement(Wave, {
-    src: "../project/assets/asset-12.png"
+    src: "assets/asset-12.png"
   }), /*#__PURE__*/React.createElement("div", {
     className: "stats-bar"
   }, /*#__PURE__*/React.createElement("div", {
@@ -891,7 +891,7 @@ function Home({
   }, s.value), /*#__PURE__*/React.createElement("div", {
     className: "stat-item__label"
   }, s.label))))), /*#__PURE__*/React.createElement(Wave, {
-    src: "../project/assets/asset-56.png",
+    src: "assets/asset-56.png",
     flip: true
   }), /*#__PURE__*/React.createElement("section", {
     className: "section section--purple"
@@ -906,7 +906,7 @@ function Home({
   }, t.mission.quote), /*#__PURE__*/React.createElement("div", {
     className: "mission__attribution"
   }, t.mission.attribution)))), /*#__PURE__*/React.createElement(Wave, {
-    src: "../project/assets/asset-11.png"
+    src: "assets/asset-11.png"
   }), /*#__PURE__*/React.createElement("section", {
     className: "section"
   }, /*#__PURE__*/React.createElement("div", {
@@ -936,7 +936,7 @@ function Home({
     name: "arrow-right",
     size: 14
   }))))))), /*#__PURE__*/React.createElement(Wave, {
-    src: "../project/assets/asset-57.png"
+    src: "assets/asset-57.png"
   }), /*#__PURE__*/React.createElement("section", {
     className: "section section--muted"
   }, /*#__PURE__*/React.createElement("div", {
@@ -962,7 +962,7 @@ function Home({
     name: "arrow-right",
     size: 16
   }))))), /*#__PURE__*/React.createElement(Wave, {
-    src: "../project/assets/asset-12.png",
+    src: "assets/asset-12.png",
     flip: true
   }), /*#__PURE__*/React.createElement("section", {
     className: "section"
@@ -1031,7 +1031,7 @@ function About({
   }, item.year), /*#__PURE__*/React.createElement("div", {
     className: "timeline-item__text"
   }, item.event)))))), /*#__PURE__*/React.createElement(Wave, {
-    src: "../project/assets/asset-56.png"
+    src: "assets/asset-56.png"
   }), /*#__PURE__*/React.createElement("section", {
     className: "section section--muted"
   }, /*#__PURE__*/React.createElement("div", {
@@ -1058,7 +1058,7 @@ function About({
   }, v.title), /*#__PURE__*/React.createElement("div", {
     className: "value-card__desc"
   }, v.desc))))))), /*#__PURE__*/React.createElement(Wave, {
-    src: "../project/assets/asset-11.png",
+    src: "assets/asset-11.png",
     flip: true
   }), /*#__PURE__*/React.createElement("section", {
     className: "section section--purple"
@@ -1114,7 +1114,7 @@ function About({
     name: "arrow-right",
     size: 14
   }))))))), /*#__PURE__*/React.createElement(Wave, {
-    src: "../project/assets/asset-12.png"
+    src: "assets/asset-12.png"
   }), /*#__PURE__*/React.createElement("section", {
     className: "section section--sm"
   }, /*#__PURE__*/React.createElement("div", {
@@ -1145,7 +1145,7 @@ function About({
       gridTemplateColumns: 'repeat(4,1fr)',
       gap: 16
     }
-  }, ['../project/assets/photo-clinic.jpg', '../project/assets/photo-rights.jpg', '../project/assets/ed4.webp', '../project/assets/hr3.webp'].map((src, i) => /*#__PURE__*/React.createElement("div", {
+  }, ['assets/photo-clinic.jpg', 'assets/photo-rights.jpg', 'assets/ed4.webp', 'assets/hr3.webp'].map((src, i) => /*#__PURE__*/React.createElement("div", {
     key: i,
     style: {
       aspectRatio: '1',
@@ -1259,7 +1259,7 @@ function Services({
       color: 'rgba(255,255,255,0.65)'
     }
   }, lang === 'en' ? 'Ministry of Public Health, Thailand · All services meet national health standards' : 'กระทรวงสาธารณสุข ประเทศไทย · บริการทั้งหมดเป็นไปตามมาตรฐานสาธารณสุขแห่งชาติ'))))), /*#__PURE__*/React.createElement(Wave, {
-    src: "../project/assets/asset-56.png",
+    src: "assets/asset-56.png",
     flip: true
   }), /*#__PURE__*/React.createElement("section", {
     className: "section section--muted"
@@ -1323,7 +1323,7 @@ function Services({
   }, item.title), /*#__PURE__*/React.createElement("div", {
     className: "value-card__desc"
   }, item.desc))))))), /*#__PURE__*/React.createElement(Wave, {
-    src: "../project/assets/asset-11.png"
+    src: "assets/asset-11.png"
   }), /*#__PURE__*/React.createElement("section", {
     className: "section"
   }, /*#__PURE__*/React.createElement("div", {
@@ -1501,7 +1501,7 @@ function Support({
   }, item.amount), /*#__PURE__*/React.createElement("div", {
     className: "impact-item__desc"
   }, item.desc)))))), /*#__PURE__*/React.createElement(Wave, {
-    src: "../project/assets/asset-56.png"
+    src: "assets/asset-56.png"
   }), /*#__PURE__*/React.createElement("section", {
     className: "section section--purple"
   }, /*#__PURE__*/React.createElement("div", {
@@ -1607,7 +1607,7 @@ function Support({
   }, s.bank_title), /*#__PURE__*/React.createElement("div", {
     className: "bank-box"
   }, s.bank))))), /*#__PURE__*/React.createElement(Wave, {
-    src: "../project/assets/asset-11.png",
+    src: "assets/asset-11.png",
     flip: true
   }), /*#__PURE__*/React.createElement("section", {
     className: "section section--muted"
@@ -1798,7 +1798,7 @@ function Contact({
     key: i,
     loc: loc
   }))))), /*#__PURE__*/React.createElement(Wave, {
-    src: "../project/assets/asset-56.png"
+    src: "assets/asset-56.png"
   }), /*#__PURE__*/React.createElement("section", {
     className: "section section--purple"
   }, /*#__PURE__*/React.createElement("div", {
@@ -2115,7 +2115,7 @@ function Contact({
     name: s.icon,
     size: 15
   })))))))), /*#__PURE__*/React.createElement(Wave, {
-    src: "../project/assets/asset-12.png",
+    src: "assets/asset-12.png",
     flip: true
   }), /*#__PURE__*/React.createElement("section", {
     className: "section section--sm section--muted"

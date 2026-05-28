@@ -1,0 +1,206 @@
+/* ============================================================
+   SWING Foundation — Colors & Type
+   Service Workers in Group Foundation (Thailand)
+   ============================================================ */
+
+/* ---------- Font face (Google Fonts) ----------
+   The site is bilingual Thai/English on a makewebeasy template.
+   We pair Prompt (geometric, energetic, supports Thai) for display
+   with Sarabun (the most widely used Thai/Latin body font) for prose.
+   FLAG: brand may have its own typography on print/social we did not
+   see — confirm with stakeholders. */
+
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700;800&family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+:root {
+  /* ---------- Brand palette ----------
+     The "swing" wordmark is the full pride rainbow. The website
+     decorations layer one signature pink with a deep indigo-purple. */
+
+  --swing-pink:        #FF0099;   /* primary brand accent — wave decorations, CTAs */
+  --swing-pink-deep:   #C2007A;
+  --swing-pink-soft:   #FFD6EE;
+  --swing-purple:      #4F3E78;   /* deep indigo from wave gradients, body headings on white */
+  --swing-purple-deep: #2E2350;
+  --swing-purple-soft: #E5E1F0;
+
+  /* Rainbow — the logotype literally is the pride flag.
+     Use sparingly for hero moments, accent borders, list markers. */
+  --pride-red:    #E53935;
+  --pride-orange: #F57C00;
+  --pride-yellow: #FDD835;
+  --pride-green:  #43A047;
+  --pride-teal:   #00897B;
+  --pride-blue:   #1E88E5;
+  --pride-purple: #7B1FA2;
+
+  /* ---------- Neutrals ---------- */
+  --ink-900: #1A1626;   /* near-black, slightly purple-tinted */
+  --ink-700: #3D3552;
+  --ink-500: #6B6480;
+  --ink-300: #B5B0C2;
+  --ink-100: #E8E5EF;
+  --paper:   #FFFFFF;
+  --paper-2: #FAF8FC;   /* very faint warm-cool off-white */
+  --paper-3: #F3F0F7;
+
+  /* ---------- Semantic ---------- */
+  --bg:           var(--paper);
+  --bg-muted:     var(--paper-2);
+  --bg-inverse:   var(--swing-purple-deep);
+
+  --fg-1:         var(--ink-900);   /* primary text */
+  --fg-2:         var(--ink-700);   /* secondary */
+  --fg-3:         var(--ink-500);   /* muted, captions */
+  --fg-on-dark:   #FFFFFF;
+  --fg-on-pink:   #FFFFFF;
+
+  --accent:       var(--swing-pink);
+  --accent-hover: var(--swing-pink-deep);
+  --accent-fg:    #FFFFFF;
+
+  --link:         var(--swing-pink);
+  --link-hover:   var(--swing-pink-deep);
+
+  --border:       var(--ink-100);
+  --border-strong:var(--ink-300);
+
+  --success: #00B85C;   /* tetrad partner — hue 144° (green) */
+  --warn:    #D6B800;   /* tetrad partner — hue 54° (gold) */
+  --danger:  #1A00FF;   /* tetrad partner — hue 234° (cobalt). Pairs with accent's 324° */
+
+  /* ---------- Type ---------- */
+  --font-display: 'Prompt', 'Noto Sans Thai', 'Helvetica Neue', system-ui, sans-serif;
+  --font-body:    'Sarabun', 'Noto Sans Thai', system-ui, -apple-system, 'Helvetica Neue', sans-serif;
+  --font-mono:    ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, Consolas, monospace;
+
+  /* ---------- Spacing scale (4px base) ---------- */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 48px;
+  --s-8: 64px;
+  --s-9: 96px;
+  --s-10: 128px;
+
+  /* ---------- Radii ---------- */
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 16px;
+  --r-xl: 24px;
+  --r-pill: 999px;
+
+  /* ---------- Elevation ---------- */
+  --shadow-sm: 0 1px 2px rgba(46, 35, 80, 0.06), 0 1px 1px rgba(46, 35, 80, 0.04);
+  --shadow-md: 0 4px 12px rgba(46, 35, 80, 0.08), 0 2px 4px rgba(46, 35, 80, 0.04);
+  --shadow-lg: 0 16px 40px rgba(46, 35, 80, 0.14), 0 4px 12px rgba(46, 35, 80, 0.06);
+  --shadow-pink: 0 8px 24px rgba(255, 0, 153, 0.28);
+
+  /* ---------- Motion ---------- */
+  --ease-out:   cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ease-in-out:cubic-bezier(0.45, 0, 0.25, 1);
+  --t-fast: 120ms;
+  --t-med:  220ms;
+  --t-slow: 420ms;
+
+  /* ---------- Signature gradients ---------- */
+  --grad-wave:  linear-gradient(180deg, #4F3E78 0%, #FF0099 100%);
+  --grad-pride: linear-gradient(90deg,
+                  #E53935 0%, #F57C00 18%, #FDD835 36%, #43A047 54%,
+                  #1E88E5 76%, #7B1FA2 100%);
+}
+
+/* ============================================================
+   Semantic element styles — apply with class names so consumers
+   can opt in without affecting native elements they style themselves.
+   ============================================================ */
+
+.ds-prose,
+.ds-prose * {
+  font-family: var(--font-body);
+  color: var(--fg-1);
+}
+
+.ds-h1, h1.ds {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(36px, 5.2vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: var(--swing-purple-deep);
+  text-wrap: balance;
+}
+
+.ds-h2, h2.ds {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(28px, 3.4vw, 42px);
+  line-height: 1.15;
+  color: var(--swing-purple-deep);
+  text-wrap: balance;
+}
+
+.ds-h3, h3.ds {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.25;
+  color: var(--swing-purple);
+}
+
+.ds-eyebrow {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--swing-pink);
+}
+
+.ds-lede {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.55;
+  color: var(--fg-2);
+  text-wrap: pretty;
+}
+
+.ds-p, p.ds {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--fg-1);
+  text-wrap: pretty;
+}
+
+.ds-small {
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--fg-3);
+}
+
+.ds-quote {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.3;
+  color: var(--swing-purple-deep);
+  font-style: normal;
+  border-left: 4px solid var(--swing-pink);
+  padding-left: var(--s-5);
+}
+
+.ds-link {
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+  transition: color var(--t-fast) var(--ease-out);
+}
+.ds-link:hover { color: var(--link-hover); }
